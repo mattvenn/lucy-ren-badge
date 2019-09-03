@@ -12,6 +12,12 @@ $63 for 100 from pcbway
 
 reduced size of master image by 4 to 1008x756
 
+## feedback
+
+* had to tell pcbway to keep silkscreen on copper with no mask (otherwise would normally be a design error and they remove it)
+* should have used mask on silk areas anyway, as it doesn't stick well onto plain copper
+* should have removed mask on the back that matches with removed mask on the front as the mask on the back makes the FR4 look green
+
 # BOM
 
 * pins - ordered from amazon
