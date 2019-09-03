@@ -36,7 +36,7 @@ OBJECTS    = main.o
 
 # For computing fuse byte values for other devices and options see
 # the fuse bit calculator at http://www.engbedded.com/fusecalc/
-FUSES      = -U lfuse:w:0xee:m -U hfuse:w:0xdd:m -U efuse:w:0xfe:m
+FUSES      = -U lfuse:w:0xee:m -U hfuse:w:0xde:m -U efuse:w:0xfe:m
 FUSESDEBUG = -U lfuse:w:0xee:m -U hfuse:w:0x9d:m -U efuse:w:0xfe:m 
 
 AVRDUDE_PATH ?= avrdude
