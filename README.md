@@ -24,11 +24,35 @@ reduced size of master image by 4 to 1008x756
 * slide switch - farnell
 * battery - ordered amazon
 * battery holder - farnell
-* attiny - check footprint & parts I have - done is correct
+* attiny88 - check footprint & parts I have - done is correct
 * 0.1u x 1  - dnp 
 * 1u x 1 - dnp
-* 10k x 1 - farnell
-* 47R x 1 - farnell
+* R1: 10k x 1 - farnell 
+* R2: 47R x 1 - farnell
+
+# Assembly notes
+
+## back side
+
+* solder microchip first. Ensure pin 1 (marked with a small circle on the package) is next to the p1 marking on the board.
+* solder R1 (10k) and R2 (47R)
+* solder the switch
+* solder the battery holder
+
+## front side
+
+* solder LED. ensure the chamfered corner matches the drawing in the silk screen
+
+## programming
+
+* change to the firmware directory
+* use an AVR ICSP programmer with pogo pins to connect to the board (or solder a header)
+* you might need to edit the Makefile to change the parameters for your programmer (line 32)
+* insert the battery (+ side up)
+* turn on the power (set slide switch to 'on')
+* make sure pin1 of the programmer matches pin1 of the header (marked by chamfered corner)
+* to program fuses: make fuse
+* to flash the software: make flash
 
 # firmware
 
