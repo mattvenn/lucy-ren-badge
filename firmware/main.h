@@ -23,8 +23,10 @@ const uint8_t gamma8[] = {
   215, 218, 220, 223, 225, 228, 231, 233, 236, 239, 241, 244, 247, 249, 252, 255
 };
 
-#define MAX_DIDDLE_DELAY_US 100
-#define MAX_PWM 255
+#define MAX_DIDDLE_DELAY_US 2500
+#define MAX_PWM_R 200
+#define MAX_PWM_G 150
+#define MAX_PWM_B 255
 
 #define PWM_R_PIN 0
 #define PWM_G_PIN 2

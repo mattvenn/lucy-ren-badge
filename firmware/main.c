@@ -89,16 +89,16 @@ int main(void)
                 throb_dir = 1;
 
 
-            pwm_blue    = gamma8[throb/2];
+            pwm_blue    = gamma8[throb];
             pwm_red     = gamma8[throb];
             pwm_green   = 0;
         }
         else
         {
             adj_delay_us(rand() / (RAND_MAX / MAX_DIDDLE_DELAY_US + 1));
-            pwm_red     = gamma8[rand() / (RAND_MAX / MAX_PWM + 1)];
-            pwm_green   = gamma8[rand() / (RAND_MAX / MAX_PWM + 1)];
-            pwm_blue    = gamma8[rand() / (RAND_MAX / MAX_PWM + 1)];
+            pwm_red     = gamma8[rand() / (RAND_MAX / MAX_PWM_R + 1)];
+            pwm_green   = gamma8[rand() / (RAND_MAX / MAX_PWM_G + 1)];
+            pwm_blue    = gamma8[rand() / (RAND_MAX / MAX_PWM_B + 1)];
         }
     }
     __builtin_unreachable();
